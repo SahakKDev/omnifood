@@ -170,12 +170,41 @@
 }
 
 /****************************/
-/* BELOW 944px */
+/* BELOW 704px */
 /****************************/
 
 @media (max-width: 44em) {
-  html {
-    /* 7px / 16px (default font-size) * 100% = 50% */
-    font-size: 43.75%;
+  .grid--3-cols,
+  .grid--4-cols {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .diets {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+
+  .pricing-plan {
+    width: 100%;
+  }
+
+  .grid-footer {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .nav-col {
+    grid-row: 1;
+    grid-column: span 2;
+    margin-bottom: 3.2rem;
+  }
+
+  .logo-col,
+  .address-col {
+    grid-row: 2;
+    grid-column: span 3;
   }
 }
